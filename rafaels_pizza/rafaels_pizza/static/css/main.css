@@ -1,3 +1,12 @@
 body{
-	background:#81DAF5;
+	background:#B43104;
+}
+
+#daily_special{
+	background: #eee;
+	box-shadow: 1px 1px 3px #333;
+}
+
+.ds_elem{
+	display: inline-block;
 }

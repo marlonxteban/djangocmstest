@@ -149,7 +149,8 @@ INSTALLED_APPS = (
     'djangocms_googlemap',
     'djangocms_video',
     'rafaels_pizza',
-    'rafs_pizza_plugins'
+    'rafs_pizza_plugins',
+    'blog',
 )
 
 LANGUAGES = (
@@ -185,7 +186,25 @@ CMS_TEMPLATES = (
 
 CMS_PERMISSION = True
 
-CMS_PLACEHOLDER_CONF = {}
+CMS_PLACEHOLDER_CONF = {
+    'daily_specials': {
+        'name': 'Daily Specials',
+        'plugins': ['Daily_Specials_Plugin'],
+        'plugin_labels':{
+            'Daily_Specials_Plugin': 'Add Daily Special'
+        },
+        'limits':{
+            'global':1
+        }
+    },
+    'menu_items': {
+        'name':'Menu Items',
+        'plugins': ['Menu_Item_Plugin'],
+        'plugin_labels':{
+            'Menu_Item_Plugin': 'Add Menu Item'
+        }
+    }
+}
 
 DATABASES = {
     'default': {

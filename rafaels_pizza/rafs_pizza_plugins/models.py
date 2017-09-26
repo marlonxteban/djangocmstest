@@ -9,9 +9,20 @@ class Daily_Specials(CMSPlugin):
 	description = models.TextField()
 	url = models.CharField(max_length=200)
 
-class Meta:
-	verbose_name = "Daily Special"
-	verbose_name_plural = "Daily Specials"
+	class Meta:
+		verbose_name = "Daily Special"
+		verbose_name_plural = "Daily Specials"
 
-def __unicode__(self):
-	return "%s" % (self.name, )
+	def __unicode__(self):
+		return "%s" %(self.name, )
+
+class Menu_Item(CMSPlugin):
+	"""docstring for Menu_Item"""
+	name = models.CharField(max_length=200)
+	image = models.ImageField(upload_to="menu_items")
+	price = models.CharField(max_length=200)
+	description = models.TextField()
+	url = models.CharField(max_length=200)
+
+	def __unicode__(self):
+		return "%s" %(self.name,)

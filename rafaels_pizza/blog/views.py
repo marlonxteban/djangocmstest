@@ -1,0 +1,29 @@
+from django.shortcuts import render
+from .models import *
+
+def post(request, p_id):
+	context = {}
+
+	post = Post.object.get(pk=p_id)
+	context["post"] = post
+
+	return render(request, "post.html", context)
+
+def category(request, c_id):
+	context = {}
+
+	category = Category.objects.get(pk=c_id)
+	context["category"] = category
+
+	posts = Post.object.filter(category=category)
+	context["posts"] = posts
+
+	return render(request, "category.html", context)
+
+def blog(request):
+	context = {}
+
+	posts = Post.objects.all()
+	context["posts"] = posts
+
+	return render(request, "blog.html", context)
