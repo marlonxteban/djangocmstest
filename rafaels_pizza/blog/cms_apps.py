@@ -10,6 +10,6 @@ class BlogApp(CMSApp):
 	"""docstring for BlogApp"""
 	app_name = 'blog'
 	name = _('Blog')
-	urls = ['blog.urls', ]
+	urls = ['blog.urls']
 	
 apphook_pool.register(BlogApp)

@@ -4,7 +4,7 @@ from .models import *
 def post(request, p_id):
 	context = {}
 
-	post = Post.object.get(pk=p_id)
+	post = Post.objects.get(pk=p_id)
 	context["post"] = post
 
 	return render(request, "post.html", context)

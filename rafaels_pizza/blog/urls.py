@@ -1,10 +1,10 @@
-from django.conf.urls import url, include
+from django.conf.urls import url
 from . import views
 
 
 
 urlpatterns = [
-	url(r'^$', include(views.blog)),
-	url(r'^category/(?P<c_id>[\-\w]+)/$', include(views.category)),
-	url(r'^post/(?P<p_id>[\-\w]+)/$', include(views.post)),
+	url(r'^$', views.blog),
+	url(r'^category/(?P<c_id>[\-\w]+)/$', views.category),
+	url(r'^post/(?P<p_id>[\-\w]+)/$', views.post),
 ]
