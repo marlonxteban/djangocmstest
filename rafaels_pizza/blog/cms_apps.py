@@ -8,7 +8,7 @@ from .views import *
 
 class BlogApp(CMSApp):
 	"""docstring for BlogApp"""
-	app_name = 'blog'
+	app_name = 'Blog'
 	name = _('Blog')
 	urls = ['blog.urls']
 	
